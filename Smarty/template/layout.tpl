@@ -15,9 +15,9 @@
 </tr>
 <tr>
 <td>
-<div id="container">
+
 {include file="$conteudo"}
-</div>
+
 </td>
 </tr>
 </table>

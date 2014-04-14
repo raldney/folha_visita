@@ -6,7 +6,7 @@
 </head>
 <form action="envia.php" method="post" id="form-contato" align= "center">
         
-        <fieldset>
+        
         <label for="nome">Nome:</label>
        
         
@@ -17,7 +17,7 @@
         <textarea rows="5" cols="3" class="width230" name="msg" id="msg"></textarea><br />
         
         <input type="submit" value="Enviar" name="enviar" id="enviar_contato" />
-        </fieldset>
+        
         
         </form>
 <body>
