@@ -1,8 +1,17 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    require_once "classes/usuario.php";
 
+    $usuario = new Usuario();
+    $usuario->setNome(addslashes(trim($_POST["usuario"])));
+    $usuario->setSenha(addslashes(trim($_POST["senha"])));
+    $usuario->setEmail(addslashes(trim($_POST["email"])));
+    $usuario->cadastrar_usuario();
+}
+
+
+require_once "smarty.php";
+$smarty->assign("titulo", "Livro de Visitas - Cadastrar Usuario");
+$smarty->assign("conteudo", "../template/cadastrar.tpl");
+$smarty->display("Smarty/template/layout.tpl");

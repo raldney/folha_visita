@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-04-15 01:03:05
+<?php /* Smarty version Smarty-3.1.11, created on 2014-04-15 01:17:04
          compiled from "Smarty\template\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2922534c69299e5130-86598933%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4cfb9d39eec93a1d5404371070a0666500b98f71' => 
     array (
       0 => 'Smarty\\template\\login.tpl',
-      1 => 1397515725,
+      1 => 1397517422,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.11',
+  'unifunc' => 'content_534c69299e8e45_83850542',
   'variables' => 
   array (
     'titulo' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.11',
-  'unifunc' => 'content_534c69299e8e45_83850542',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_534c69299e8e45_83850542')) {function content_534c69299e8e45_83850542($_smarty_tpl) {?><html >
     <head>
@@ -44,6 +44,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
         </form>
-        <p align="center"><a href="#">Cadastrar Usuario</a> | <a href="#">Esqueci a Senha</a> </p>
+        <p align="center"><a href="cadastrar.php">Cadastrar Usuario</a> | <a href="#">Esqueci a Senha</a> </p>
     </body>
 </html><?php }} ?>

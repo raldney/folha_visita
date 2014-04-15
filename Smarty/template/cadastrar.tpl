@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Untitled Document</title>
     </head>
-    <form action="login.php" method="post" id="form-contato"  width="800" align="center" >
+    <form action="cadastrar.php" method="post" id="form-contato"  width="800" align="center" >
 
 
         <label for="Usuario">Usuario:</label>
@@ -16,7 +16,7 @@
         <label for="senha">Senha:</label>
         <input type="password" class="width230" name="senha" id="senha" />       
 
-        <input type="submit" value="Enviar" name="enviar" id="enviar_contato" />
+        <input type="submit" value="Enviar" name="enviar" id="enviar_usuario" />
 
 
     </form>
