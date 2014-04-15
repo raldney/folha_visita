@@ -30,15 +30,24 @@ class Usuario {
         $this->email = $email;
     }
 
-    public function cadastrar_usuario() {
+    public function cadastrarUsuario() {
         require_once "conecta.php";
         $nome = $this->getNome();
         $senha = $this->getSenha();
         $email = $this->getEmail();
-        $insere = mysql_query("INSERT INTO `usuario`( `nome_usuario`, `senha_usuario`, `email_usuario`) VALUES ('$nome','$senha','$email')") or die(mysql_error());
-        if (!$insere) {
-            echo "Não foi possível fazer o seu cadastramento!";
+        $verificar = mysql_query("SELECT * FROM usuario WHERE nome_usuario='$nome' AND email_usuario= '$email'");
+        if (mysql_num_rows($verificar) == 0) {
+            $insere = mysql_query("INSERT INTO `usuario`( `nome_usuario`, `senha_usuario`, `email_usuario`) VALUES ('$nome','$senha','$email')") or die(mysql_error());
+            if (!$insere) {
+                echo "Não foi possível fazer o seu cadastramento!";
+            }
+        } else {
+            echo "Usuario e E-Mail ja existem!!!";
         }
     }
+
+  
+
+    
 
 }

@@ -1,18 +1,19 @@
 <?php
 
-require_once "conecta.php";
-$usuario = addslashes(trim($_POST["usuario"]));
-$senha = addslashes(trim($_POST["senha"]));
+require_once "classes/seguranca.php";
+$proteger = new Seguranca();
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    require_once "conecta.php";
+    $usuario = (isset(addslashes(trim($_POST["usuario"])))) ? addslashes(trim($_POST["usuario"])) : '';
+    $senha = (isset(addslashes(trim($_POST["senha"])))) ? addslashes(trim($_POST["senha"])) : '';
+    $usuario = addslashes(trim($_POST["usuario"]));
+    $senha = addslashes(trim($_POST["senha"]));
+    if ($proteger->validaUsuario($usuario, $senha) == true) {
 
-
-$logar = mysql_query("SELECT * FROM usuario WHERE nome_usuario='$usuario' AND senha_usuario='$senha'") or die("erro ao selecionar");
-
-if (mysql_num_rows($logar) > 0) {
-    require_once "smarty.php";
-    $smarty->assign("titulo", "Livro de Visitas - Login");
-    $smarty->assign("conteudo", "../template/mensagem.tpl");
-    $smarty->display("Smarty/template/layout.tpl");
-} else {
-    echo '';
+        header("Location: livro.php");
+    } else {
+        echo 'Combinação invalida';
+        $proteger->expulsaVisitante();
+    }
 }
 

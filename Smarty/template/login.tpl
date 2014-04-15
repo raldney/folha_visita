@@ -18,6 +18,6 @@
 
 
         </form>
-        <p align="center"><a href="cadastrar.php">Cadastrar Usuario</a> | <a href="#">Esqueci a Senha</a> </p>
+        <p align="center"><a href="cadastrar.php">Cadastrar Usuario</a> </p>
     </body>
 </html>
