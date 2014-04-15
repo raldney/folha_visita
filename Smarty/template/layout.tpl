@@ -2,14 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="Smarty/template/estilo.css" />
 <title>{$titulo}</title>
 </head>
-<body bgcolor="#8b795e">
-<center>
+<body>
 
-<table bgcolor="#cdc0b0" width="800" style="border-radius:10px">
-<tr>
-<td>
+
+    <table bgcolor="" width="800" style="border-radius:10px" align="center" id="corpo">
+<tr id="banner">
+<td >
 {html_image file="Smarty/template/banner.gif"}
 </td>
 </tr>
@@ -21,6 +22,6 @@
 </td>
 </tr>
 </table>
-<center>
+
 </body>
 </html>

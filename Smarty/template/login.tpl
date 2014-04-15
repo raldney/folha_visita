@@ -1,11 +1,13 @@
 <html >
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
         <title>{$titulo}</title>
+        <link rel="stylesheet" type="text/css" href="Smarty/template/estilo.css" />
     </head>
     <body>
 
-        <form action="login.php" method="post" id="form-contato"  width="800" align="center" >
+        <form action="login.php" method="post" id="form-contato" >
 
 
             <label for="Usuario">Usuario:</label>
@@ -18,6 +20,6 @@
 
 
         </form>
-        <p align="center"><a href="cadastrar.php">Cadastrar Usuario</a> </p>
+        <p ><a href="cadastrar.php">Criar Usuario</a> </p>
     </body>
 </html>
