@@ -6,22 +6,33 @@
         <title>Untitled Document</title>
     </head>
     <body>
-        <form action="cadastrar.php" method="post" id="form-contato"  width="800" align="center" >
+        <table id="organizador">
+            <tr>
+                <td  id="texto">
+                    <h1>{$mensagem}</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="cadastrar.php" method="post" id="form-cadastrar"  width="800" align="center" >
 
 
-            <label for="Usuario">Usuario:</label>
-            <input type="text" class="width230" name="usuario" id="usuario"  />
+                        <label for="Usuario">Usuario:</label>
+                        <input type="text"  name="usuario" id="usuario"  />
 
-            <label for="Email">E-Mail:</label>
-            <input type="text" class="width230" name="email" id="email"  />
+                        <label for="Email">E-Mail:</label>
+                        <input type="text"  name="email" id="email"  />
 
-            <label for="senha">Senha:</label>
-            <input type="password" class="width230" name="senha" id="senha" />       
+                        <label for="senha">Senha:</label>
+                        <input type="password"  name="senha" id="senha" />       
 
-            <input type="submit" value="Enviar" name="enviar" id="enviar_usuario" />
+                        <p><button type="submit" id="enviar" class="buttons" name="enviar" >Enviar</button> </p>
 
 
-        </form>
+                    </form>
+                </td>
+            </tr>
+        </table>
 
     </body>
 </html>

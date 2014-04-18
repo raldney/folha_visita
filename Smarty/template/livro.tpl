@@ -6,23 +6,32 @@
         <title>{$titulo}</title>
     </head>
     <body>
-        <p><a href="logout.php">Logout!</a></p>
-        <form action="envia.php" method="post" id="form-contato" >
-            <table border="3" align="center">
+
+        <table id="organizador" >
+            <tr>
+                <td>
+                </td>
+                <td >
+                    <a href="index.php" class="buttons" style="margin-left: 200px;margin-top: 200px ">Logout!</a>
+                </td>
+            </tr>
+
+            <form action="envia.php" method="post" id="form-login" >
+
                 <tr>
                     <td>
-                        <label>Nome:</label>
+                        <h1>Nome:</h1>
                     </td>
-                    <td>
-                        <label for="nome">{$nome}</label>
+                    <td >
+                        <h1>{$nome}</h1>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <label >E-Mail:</label>
+                    <td >
+                        <h2>E-Mail:</h2>
                     </td>
-                    <td>
-                        <label for="email">{$email}</label>
+                    <td >
+                        <h2>{$email}</h2>
                     </td>
                 </tr>
                 <tr>
@@ -41,12 +50,15 @@
                     <td>
                     </td>
                     <td>
-                        <input type="submit" value="Enviar" name="enviar" id="enviar_contato" />
+                        <input type="submit" value="Enviar" name="enviar" id="enviar_contato" class="buttons"/>
+
                     </td>
                 </tr>
-            </table>
+            </form>
+        </table>
 
-        </form>
+
+
 
     </body>
 </html>

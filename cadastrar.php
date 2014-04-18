@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 require_once "smarty.php";
 $smarty->assign("titulo", "Livro de Visitas - Cadastrar Usuario");
 $smarty->assign("conteudo", "../template/cadastrar.tpl");
+$smarty->assign("mensagem", "Sistema de cadastramento de usuario, para continuar bastar preecher seus dados e clicar em enviar");
 $smarty->display("Smarty/template/layout.tpl");
 
 
