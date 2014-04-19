@@ -1,0 +1,22 @@
+<?php
+
+class postarMensagem {
+
+    public function getAdapter() {
+        return $this->adapter;
+    }
+
+    public function setAdapter($adapter) {
+        $this->adapter = $adapter;
+    }
+
+    public function __construct(Database $banco) {
+        $this->setAdapter($banco);
+    }
+
+    public function postarMensagem(Mensagem $msg) {
+        $sql = sprintf("INSERT INTO  `livro_visita`.`mensagem` (`id_usuario` ,`ctd_mensagem` ,`data_mensagem`)VALUES ('%s',  '%s',  '%s') ;");
+        $stmt = $this->getAdapter()->excutar($sql);
+                  return $stmt;
+        }
+

@@ -2,21 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <link rel="stylesheet" type="text/css" href="Smarty/template/estilo.css" />
+        <script type="text/javascript" src="jquery-1.4.2.js"></script>
+        <script type="text/javascript" src="postaLivro.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{$titulo}</title>
     </head>
     <body>
-
         <table id="organizador" >
             <tr>
                 <td>
                 </td>
                 <td >
-                    <a href="index.php" class="buttons" style="margin-left: 200px;margin-top: 200px ">Logout!</a>
+                    <a href="logout.php" class="buttons" style="margin-left: 200px;">Logout!</a>
                 </td>
             </tr>
 
-            <form action="envia.php" method="post" id="form-login" >
+            <form action="postarLivro.php" method="post" id="form-login" >
 
                 <tr>
                     <td>
@@ -39,26 +40,27 @@
                         <label for="mensagem">Mensagem:</label>  
                     </td>
                     <td>
-
-                        <textarea rows="5" cols="3"  name="msg" id="msg" ></textarea><br />
+                        <textarea rows="5" cols="3"  name="mensagem" id="mensagem" ></textarea><br />
                     </td>
                 </tr>
-
-
-
                 <tr>
                     <td>
                     </td>
                     <td>
-                        <input type="submit" value="Enviar" name="enviar" id="enviar_contato" class="buttons"/>
 
+                        <button type="button"  name="envia" id="envia" class="buttons">Enviar</button>
+                    </td>
+                </tr>
+                     <tr>
+                    <td>
+                    </td>
+                    <td>
+
+                        <div id="resposta"></div>
                     </td>
                 </tr>
             </form>
         </table>
-
-
-
-
+        
     </body>
 </html>

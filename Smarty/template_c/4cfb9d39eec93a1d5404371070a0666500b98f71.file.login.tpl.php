@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-04-18 06:56:30
+<?php /* Smarty version Smarty-3.1.11, created on 2014-04-19 07:30:30
          compiled from "Smarty\template\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2922534c69299e5130-86598933%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4cfb9d39eec93a1d5404371070a0666500b98f71' => 
     array (
       0 => 'Smarty\\template\\login.tpl',
-      1 => 1397796484,
+      1 => 1397885429,
       2 => 'file',
     ),
   ),
@@ -31,8 +31,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </title>
         <link rel="stylesheet" type="text/css" href="Smarty/template/estilo.css" />
-        <script type="text/javascript" src="jquery-1.4.2.js"></script>
-        <script type="text/javascript" src="login.js"></script>
+        <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+        <script type="text/javascript" src="js/loginUsuario.js"></script>
     </head>
     <body>
         <table id="organizador">

@@ -13,7 +13,7 @@ function validaLogin(usuario, senha) {
 
     if (usuario.val() == "") {
         alert("Informe o login!");
-        login.focus();
+        usuario.focus();
         return;
     }
     else if (senha.val() == "") {
@@ -27,13 +27,15 @@ function validaLogin(usuario, senha) {
 
         $("#resposta").html("Autenticando...");
 
-        $.post("login.php", {usuario: usuario.val(), senha: senha.val()},
+        $.post("php/loginUsuario.php", {nome: usuario.val(), senha: senha.val()},
         function(retorno) {
 
             //Insere na DIV #resultado o que foi retornado pelas classes de manipulação do Usuário (Se os dados estão corretos ou não)
 
             $("#resposta").html(retorno);
+            if (retorno == "Logado com Sucesso"){
             setTimeout("document.location = 'livro.php'",500);
+        }
         } //function(retorno)
         ); //$.post()
 

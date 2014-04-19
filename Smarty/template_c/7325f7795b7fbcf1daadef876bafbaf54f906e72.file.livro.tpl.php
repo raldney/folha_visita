@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-04-18 07:08:19
+<?php /* Smarty version Smarty-3.1.11, created on 2014-04-19 08:09:56
          compiled from "C:\xampp\htdocs\livro_visita\Smarty\template\livro.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20020534c93265c63a5-26338283%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7325f7795b7fbcf1daadef876bafbaf54f906e72' => 
     array (
       0 => 'C:\\xampp\\htdocs\\livro_visita\\Smarty\\template\\livro.tpl',
-      1 => 1397797695,
+      1 => 1397887791,
       2 => 'file',
     ),
   ),
@@ -29,22 +29,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <link rel="stylesheet" type="text/css" href="Smarty/template/estilo.css" />
+        <script type="text/javascript" src="jquery-1.4.2.js"></script>
+        <script type="text/javascript" src="postaLivro.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </title>
     </head>
     <body>
-
         <table id="organizador" >
             <tr>
                 <td>
                 </td>
                 <td >
-                    <a href="index.php" class="buttons" style="margin-left: 200px;margin-top: 200px ">Logout!</a>
+                    <a href="logout.php" class="buttons" style="margin-left: 200px;">Logout!</a>
                 </td>
             </tr>
 
-            <form action="envia.php" method="post" id="form-login" >
+            <form action="postarLivro.php" method="post" id="form-login" >
 
                 <tr>
                     <td>
@@ -69,27 +70,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <label for="mensagem">Mensagem:</label>  
                     </td>
                     <td>
-
-                        <textarea rows="5" cols="3"  name="msg" id="msg" ></textarea><br />
+                        <textarea rows="5" cols="3"  name="mensagem" id="mensagem" ></textarea><br />
                     </td>
                 </tr>
-
-
-
                 <tr>
                     <td>
                     </td>
                     <td>
-                        <input type="submit" value="Enviar" name="enviar" id="enviar_contato" class="buttons"/>
 
+                        <button type="button"  name="envia" id="envia" class="buttons">Enviar</button>
+                    </td>
+                </tr>
+                     <tr>
+                    <td>
+                    </td>
+                    <td>
+
+                        <div id="resposta"></div>
                     </td>
                 </tr>
             </form>
         </table>
-
-
-
-
+        
     </body>
 </html>
 <?php }} ?>

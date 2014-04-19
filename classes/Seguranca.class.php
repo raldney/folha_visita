@@ -1,7 +1,5 @@
 <?php
 
-require_once "conecta.php";
-require_once "usuario.php";
 $_SG['conectaServidor'] = false;    // Abre uma conexão com o servidor MySQL
 $_SG['abreSessao'] = true;         // Inicia a sessão com um session_start()
 $_SG['caseSensitive'] = false;     // Usar case-sensitive
@@ -10,7 +8,7 @@ $_SG['validaSempre'] = true;       // Deseja validar o usuário e a senha a cada
 $_SG['servidor'] = 'localhost';    // Servidor MySQL
 $_SG['usuario'] = 'root';          // Usuário MySQL
 $_SG['senha'] = '';                // Senha MySQL
-$_SG['banco'] = 'usuario';            // Banco de dados MySQL
+$_SG['banco'] = 'livro_visita';            // Banco de dados MySQL
 $_SG['paginaLogin'] = 'login.php'; // Página de login
 $_SG['tabela'] = 'usuario';       // Nome da tabela onde os usuários são salvos
 // Verifica se precisa iniciar a sessão
@@ -20,25 +18,41 @@ if ($_SG['abreSessao'] == true) {
 
 class Seguranca {
 
-    public function validaUsuario($nome, $senha) {
-        global $_SG;
-        $usuario = new Usuario();
-        $busca = mysql_query("SELECT  `email_usuario`,`nome_usuario` FROM `usuario` WHERE nome_usuario='$nome' AND senha_usuario= '$senha' LIMIT 1");
-        $resultado = mysql_fetch_assoc($busca);
+    public function getAdapter() {
+        return $this->adapter;
+    }
 
-        if (empty($resultado)) {
-            return false;
+    public function setAdapter($adapter) {
+        $this->adapter = $adapter;
+    }
+
+    public function __construct(Database $banco) {
+        $this->setAdapter($banco);
+    }
+
+    public function validaUsuario(Usuario $user) {
+        global $_SG;
+        $usuario = $user;
+        $sql = sprintf("SELECT * FROM usuario WHERE nome_usuario='" . $usuario->getNome() . "' AND senha_usuario= '" . $usuario->getSenha() . "';");
+        $stmt = $this->getAdapter()->executar($sql);
+
+        if ($stmt->rowCount() == 0) {
+            echo 'fudeu';
+            return $stmt;
         } else {
-            $_SESSION['usuarioEmail'] = $resultado['email_usuario']; // Pega o valor da coluna 'id do registro encontrado no MySQL
-            $_SESSION['usuarioNome'] = $resultado['nome_usuario']; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
-           
+            
+            $resultado = $stmt->fetch(PDO::FETCH_OBJ);
+            $_SESSION['usuarioId'] = $resultado->id_usuario;
+            $_SESSION['usuarioEmail'] = $resultado->email_usuario; // Pega o valor da coluna 'id do registro encontrado no MySQL
+            $_SESSION['usuarioNome'] = $resultado->nome_usuario; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
 // Verifica a opção se sempre validar o login
             if ($_SG['validaSempre'] == true) {
 // Definimos dois valores na sessão com os dados do login
                 $_SESSION['usuarioLogin'] = $nome;
                 $_SESSION['usuarioSenha'] = $senha;
-                return true;
+                
             }
+            return $stmt;
         }
     }
 
@@ -57,7 +71,7 @@ class Seguranca {
 // Verifica se os dados salvos na sessão batem com os dados do banco de dados
                 if (!validaUsuario($_SESSION['usuarioLogin'], $_SESSION['usuarioSenha'])) {
 // Os dados não batem, manda pra tela de login
-                    expulsaVisitante();
+                    $this->expulsaVisitante();
                 }
             }
         }
@@ -70,7 +84,7 @@ class Seguranca {
 
         global $_SG;
 // Remove as variáveis da sessão (caso elas existam)
-        unset($_SESSION['usuarioEmail'], $_SESSION['usuarioNome'], $_SESSION['usuarioLogin'], $_SESSION['usuarioSenha']);
+        session_destroy();
 // Manda pra tela de login
         header("Location: index.php");
     }
