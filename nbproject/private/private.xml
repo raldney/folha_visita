@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/livro_visita/Smarty/template/livro.tpl</file>
-            <file>file:/C:/xampp/htdocs/livro_visita/cadastrar.php</file>
-            <file>file:/C:/xampp/htdocs/livro_visita/classes/Seguranca.class.php</file>
-            <file>file:/C:/xampp/htdocs/livro_visita/livro.php</file>
-            <file>file:/C:/xampp/htdocs/livro_visita/php/loginUsuario.php</file>
-            <file>file:/C:/xampp/htdocs/livro_visita/classes/bancoUsuario.class.php</file>
-            <file>file:/C:/xampp/htdocs/livro_visita/index.php</file>
-            <file>file:/C:/xampp/htdocs/livro_visita/logout.php</file>
+            <file>file:/C:/xampp/htdocs/livro_visita/Smarty/template/cadastrar.tpl</file>
+            <file>file:/C:/xampp/htdocs/livro_visita/php/cadastrarUsuario.php</file>
+            <file>file:/C:/xampp/htdocs/livro_visita/js/cadastrarUsuario.js</file>
             <file>file:/C:/xampp/htdocs/livro_visita/js/loginUsuario.js</file>
         </group>
     </open-files>

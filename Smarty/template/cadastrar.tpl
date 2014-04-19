@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" type="text/css" href="Smarty/template/estilo.css" />
+        <link rel="stylesheet" type="text/css" href="Smarty/template/estilo/estilo.css" />
         <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
         <script type="text/javascript" src="js/cadastrarUsuario.js"></script>
         <title>{$titulo}</title>
@@ -16,25 +16,27 @@
             </tr>
             <tr>
                 <td>
-                    <form action="php/cadastrar.php" method="post" id="form-cadastrar"  width="800" align="center" >
+                    <form id="form-cadastrar"  width="800" align="center" >
 
+                        <fieldset class="height280">
+                            <p class="loading">{html_image file="Smarty/template/img/loading.gif"}&nbsp;<strong>Cadastrando...</strong></p>
+                            <div id="resposta"></div>
+                                                        <label for="Usuario">Usuario:</label>
+                            <input type="text"  name="usuario" id="usuario"  />
 
-                        <label for="Usuario">Usuario:</label>
-                        <input type="text"  name="usuario" id="usuario"  />
+                            <label for="Email">E-Mail:</label>
+                            <input type="text"  name="email" id="email"  />
 
-                        <label for="Email">E-Mail:</label>
-                        <input type="text"  name="email" id="email"  />
+                            <label for="WebSite">WebSite:</label>
+                            <input type="text"  name="site" id="site"  />
 
-                        <label for="WebSite">WebSite:</label>
-                        <input type="text"  name="site" id="site"  />
-
-                        <label for="senha">Senha:</label>
-                        <input type="password"  name="senha" id="senha" />       
-                        <div id="resposta"></div>
-                        <p><button type="button" id="cadastrarButton" class="buttons" name="enviar" >Enviar</button> </p>
-
-
+                            <label for="senha">Senha:</label>
+                            <input type="password"  name="senha" id="senha" />  
+                            <p><button type="button" id="enviarButton" class="buttons" name="enviar" >Enviar</button> </p>
+                        </fieldset>
+                        <a href="index.php" class="buttons" style="margin-left: 600px; ">Retornar</a>
                     </form>
+                    
                 </td>
             </tr>
         </table>

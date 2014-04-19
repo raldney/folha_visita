@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-04-18 03:45:20
+<?php /* Smarty version Smarty-3.1.11, created on 2014-04-19 18:30:28
          compiled from "Smarty\template\layout.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:30037534c692999fb11-95332254%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '11065919120a55ec6c85c47c1545b8815fe2134f' => 
     array (
       0 => 'Smarty\\template\\layout.tpl',
-      1 => 1397785519,
+      1 => 1397925027,
       2 => 'file',
     ),
   ),
@@ -28,7 +28,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" type="text/css" href="Smarty/template/estilo.css" />
+        <link rel="stylesheet" type="text/css" href="Smarty/template/estilo/estilo.css" />
         <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </title>
     </head>
@@ -36,7 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
         <div id="banner">
 
-            <?php echo smarty_function_html_image(array('file'=>"Smarty/template/banner2.gif"),$_smarty_tpl);?>
+            <?php echo smarty_function_html_image(array('file'=>"Smarty/template/img/banner.gif"),$_smarty_tpl);?>
 
         </div>
 

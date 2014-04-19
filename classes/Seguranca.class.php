@@ -37,10 +37,9 @@ class Seguranca {
         $stmt = $this->getAdapter()->executar($sql);
 
         if ($stmt->rowCount() == 0) {
-            echo 'fudeu';
-            return $stmt;
+            return false;
         } else {
-            
+
             $resultado = $stmt->fetch(PDO::FETCH_OBJ);
             $_SESSION['usuarioId'] = $resultado->id_usuario;
             $_SESSION['usuarioEmail'] = $resultado->email_usuario; // Pega o valor da coluna 'id do registro encontrado no MySQL
@@ -50,7 +49,6 @@ class Seguranca {
 // Definimos dois valores na sessão com os dados do login
                 $_SESSION['usuarioLogin'] = $nome;
                 $_SESSION['usuarioSenha'] = $senha;
-                
             }
             return $stmt;
         }

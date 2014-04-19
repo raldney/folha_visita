@@ -17,5 +17,5 @@ $user = new Usuario($posts['nome'], $posts['senha'], '', '');
 if ($logar->validaUsuario($user)) {
     echo 'Logado com Sucesso';
 } else {
-    echo 'Falaha com Sucesso';
+    echo 'Erro com a validação';
 }
