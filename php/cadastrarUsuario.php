@@ -15,7 +15,7 @@ $postsArray = filter_input_array(INPUT_POST, array(
 $posts = array_map("strip_tags", $postsArray);
 $user = new Usuario($posts['nome'], $posts['senha'], $posts['email'], $posts['website']);
 if ($cadastro->cadastrarUsuario($user)) {
-    echo 'Inserido com Sucesso';
+    echo 'Cadastrado com Sucesso';
     } else {
     echo 'Não foi possivel cadastrar Usuario!';
 }

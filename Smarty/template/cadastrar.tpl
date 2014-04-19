@@ -16,9 +16,9 @@
             </tr>
             <tr>
                 <td>
-                    <form id="form-cadastrar"  width="800" align="center" >
+                    <form method="post" action="php/cadastrarUsuario.php " id="form-cadastrar"  width="800" align="center" >
 
-                        <fieldset class="height280">
+                        <fieldset class="height290">
                             <p class="loading">{html_image file="Smarty/template/img/loading.gif"}&nbsp;<strong>Cadastrando...</strong></p>
                             <div id="resposta"></div>
                                                         <label for="Usuario">Usuario:</label>

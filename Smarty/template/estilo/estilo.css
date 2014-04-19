@@ -14,7 +14,7 @@ label{display:block; font-size:2em; margin-top:5px;}
 textarea{overflow:auto; font:1.2em Arial, Helvetica, sans-serif; color:#333; line-height:1.6em;width:300px;}
 p{margin-left: 150px;margin-top:10px; }
 fieldset{width: 350px; height: 180px; margin: 0 auto; -webkit-border-radius: 5px;-moz-border-radius: 5px; border: 1px solid #87ceff;box-shadow:5px 5px 5px #000000; background-color: #104e8b ;}
-    .height280{height: 280px;}
+    .height290{height: 290px;}
 #organizador{margin:0 auto;  padding-top: 20px; background-color: #0a568f; width: 800px; }
 #texto{color:#fff; text-shadow:  #3eacff 1px 2px 5px;width: 400px; text-align: justify; }
 .buttons{margin:0 auto;font:bold 12px Tahoma, Geneva, sans-serif;font-style:normal;color:#ffffff;background:#1568db;border:0px solid #ffffff;

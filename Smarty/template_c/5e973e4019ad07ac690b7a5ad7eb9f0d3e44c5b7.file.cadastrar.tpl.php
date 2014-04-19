@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-04-19 19:26:42
+<?php /* Smarty version Smarty-3.1.11, created on 2014-04-19 19:32:36
          compiled from "Smarty\template\cadastrar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:306265351f0548b92f2-23950320%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5e973e4019ad07ac690b7a5ad7eb9f0d3e44c5b7' => 
     array (
       0 => 'Smarty\\template\\cadastrar.tpl',
-      1 => 1397928395,
+      1 => 1397928754,
       2 => 'file',
     ),
   ),
@@ -45,9 +45,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </tr>
             <tr>
                 <td>
-                    <form id="form-cadastrar"  width="800" align="center" >
+                    <form method="post" action="php/cadastrarUsuario.php " id="form-cadastrar"  width="800" align="center" >
 
-                        <fieldset class="height280">
+                        <fieldset class="height290">
                             <p class="loading"><?php echo smarty_function_html_image(array('file'=>"Smarty/template/img/loading.gif"),$_smarty_tpl);?>
 &nbsp;<strong>Cadastrando...</strong></p>
                             <div id="resposta"></div>
