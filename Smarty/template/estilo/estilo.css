@@ -11,11 +11,12 @@ body{margin:0 auto; line-height:1; font-size:62.5%; background:#000; font-family
 input, textarea{padding:3px; margin-bottom:5px; border:1px solid #c0c0c0; -moz-border-radius:3px; -webkit-border-radius:3px;}
 input:focus, textarea:focus{border-color:#999;}
 label{display:block; font-size:2em; margin-top:5px;}
-textarea{overflow:auto; font:1.2em Arial, Helvetica, sans-serif; color:#333; line-height:1.6em;width:300px;}
+textarea{ resize: none;overflow:auto; font:1.2em Arial, Helvetica, sans-serif; color:#333; line-height:1.6em;width:300px;}
 p{margin-left: 150px;margin-top:10px; }
 fieldset{width: 350px; height: 180px; margin: 0 auto; -webkit-border-radius: 5px;-moz-border-radius: 5px; border: 1px solid #87ceff;box-shadow:5px 5px 5px #000000; background-color: #104e8b ;}
     .height290{height: 290px;}
-#organizador{margin:0 auto;  padding-top: 20px; background-color: #0a568f; width: 800px; }
+    .width800{}
+#organizador{margin:0 auto;  padding-top: 20px;  }
 #texto{color:#fff; text-shadow:  #3eacff 1px 2px 5px;width: 400px; text-align: justify; }
 .buttons{margin:0 auto;font:bold 12px Tahoma, Geneva, sans-serif;font-style:normal;color:#ffffff;background:#1568db;border:0px solid #ffffff;
 -moz-box-shadow:2px 2px 5px #000000;

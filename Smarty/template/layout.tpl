@@ -15,6 +15,9 @@
         <div id="conteudo">
             {include file="$conteudo"}
         </div>
+        <div id="mensagens">
+            {include file="$mensagens"}
+        </div>
 
     </body>
 </html>

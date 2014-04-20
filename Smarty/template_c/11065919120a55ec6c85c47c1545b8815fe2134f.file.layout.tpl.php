@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-04-19 18:30:28
+<?php /* Smarty version Smarty-3.1.11, created on 2014-04-19 22:33:36
          compiled from "Smarty\template\layout.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:30037534c692999fb11-95332254%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '11065919120a55ec6c85c47c1545b8815fe2134f' => 
     array (
       0 => 'Smarty\\template\\layout.tpl',
-      1 => 1397925027,
+      1 => 1397939614,
       2 => 'file',
     ),
   ),
@@ -42,6 +42,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
         <div id="conteudo">
             <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['conteudo']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+        </div>
+        <div id="mensagens">
+            <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['mensagens']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
         </div>
 

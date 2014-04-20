@@ -17,4 +17,5 @@ $smarty->assign("titulo", "Livro de Visitas");
 $smarty->assign("nome", "$nome");
 $smarty->assign("email", "$email");
 $smarty->assign("conteudo", "../template/livro.tpl");
+$smarty->assign("mensagens","Smarty/template/livro.tpl");
 $smarty->display("Smarty/template/layout.tpl");
