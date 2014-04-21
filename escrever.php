@@ -16,6 +16,6 @@ require_once "smarty.php";
 $smarty->assign("titulo", "Livro de Visitas");
 $smarty->assign("nome", "$nome");
 $smarty->assign("email", "$email");
-$smarty->assign("conteudo", "../template/livro.tpl");
+$smarty->assign("conteudo", "../template/escrever.tpl");
 $smarty->assign("mensagens","Smarty/template/livro.tpl");
 $smarty->display("Smarty/template/layout.tpl");

@@ -3,10 +3,10 @@
 class Usuario {
 
     public function __construct($nome, $senha, $email, $website) {
-        $this->setNome($nome);
-        $this->setSenha($senha);
-        $this->setEmail($email);
-        $this->setWebsite($website);
+        $this->setNome(strip_tags(htmlspecialchars($nome)));
+        $this->setSenha(strip_tags(htmlspecialchars($senha)));
+        $this->setEmail(strip_tags(htmlspecialchars($email)));
+        $this->setWebsite(strip_tags(htmlspecialchars($website)));
     }
 
     public function getNome() {

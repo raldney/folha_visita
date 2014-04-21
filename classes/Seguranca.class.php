@@ -43,7 +43,8 @@ class Seguranca {
             $resultado = $stmt->fetch(PDO::FETCH_OBJ);
             $_SESSION['usuarioId'] = $resultado->id_usuario;
             $_SESSION['usuarioEmail'] = $resultado->email_usuario; // Pega o valor da coluna 'id do registro encontrado no MySQL
-            $_SESSION['usuarioNome'] = $resultado->nome_usuario; // Pega o valor da coluna 'nome' do registro encontrado no MySQL
+            $_SESSION['usuarioNome'] = $resultado->nome_usuario;
+            $_SESSION['usuarioSite'] = $resultado->site_usuario;// Pega o valor da coluna 'nome' do registro encontrado no MySQL
 // Verifica a opção se sempre validar o login
             if ($_SG['validaSempre'] == true) {
 // Definimos dois valores na sessão com os dados do login

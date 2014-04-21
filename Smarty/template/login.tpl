@@ -4,8 +4,7 @@
 
         <title>{$titulo}</title>
         <link rel="stylesheet" type="text/css" href="Smarty/template/estilo/estilo.css" />
-        <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
-        <script type="text/javascript" src="js/loginUsuario.js"></script>
+        
     </head>
     <body>
         <table id="organizador">

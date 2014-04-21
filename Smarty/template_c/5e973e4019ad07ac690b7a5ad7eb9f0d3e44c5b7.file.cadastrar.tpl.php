@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-04-19 19:32:36
+<?php /* Smarty version Smarty-3.1.11, created on 2014-04-20 16:49:46
          compiled from "Smarty\template\cadastrar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:306265351f0548b92f2-23950320%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5e973e4019ad07ac690b7a5ad7eb9f0d3e44c5b7' => 
     array (
       0 => 'Smarty\\template\\cadastrar.tpl',
-      1 => 1397928754,
+      1 => 1398005311,
       2 => 'file',
     ),
   ),
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="Smarty/template/estilo/estilo.css" />
         <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
-        <script type="text/javascript" src="js/cadastrarUsuario.js"></script>
+        
         <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </title>
     </head>

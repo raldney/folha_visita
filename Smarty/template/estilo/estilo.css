@@ -31,12 +31,21 @@ text-decoration: none;
 }
 .buttons:active{cursor:pointer;position:relative;top:2px;}
 #banner img {width: 100%; height: 200px; position: absolute; }
-#conteudo{ background-color: #0a568f;width: 800px; margin:0 auto; height: 360px; -moz-border-radius:5px 5px 5px 5px;
--webkit-border-radius:5px 5px 5px 5px;
+#conteudo{ background-color: #0a568f;width: 800px; margin:0 auto; height: 360px; -moz-border-radius:5px 5px 0px 0px;
+-webkit-border-radius:5px 5px 0px 0px;
 padding-top: 200px}
+#mensagens{ background-color: #0a568f;width: 800px; margin:0 auto; -moz-border-radius:0px 0px 5px 5px;
+-webkit-border-radius:0px 0px 5px 5px; padding-top: 10px;}
 #form-login{margin: 0 auto; }
     .loading,#resposta{color: white;width:230px;  border:1px solid #ccc; padding:3px; text-align:center; margin:0 auto; display:none}
     .loading img{vertical-align:middle;}
+.loadingBar{margin: 0 auto;width: 200px; }
+.postagem{table-layout: fixed;width:600px;  margin: 0 auto; background-color: #104e8b;color:#FFF; border-radius:5px;border-radius:5px;border:1px solid #87ceff;margin-top:10px; }
+.data{font-family:Verdana, Geneva, sans-serif;font-size:12px;font-style:italic;}
+.nome{font-family:Verdana, Geneva, sans-serif;font-size:16px;font-style:oblique;}
+.email{font-family:Verdana, Geneva, sans-serif;font-size:14px; font-style:italic;}
+.site{font-family:Verdana, Geneva, sans-serif;font-size:12px;font-style:italic;}
+.mensagem{font-family:Verdana, Geneva, sans-serif;font-size:16px;}
 
 
 

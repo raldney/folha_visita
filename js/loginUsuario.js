@@ -31,10 +31,11 @@ function validaLogin(usuario, senha) {
             context: jQuery('#resposta'),
             success: function(retorno) {
                 $(".loading").fadeOut(200);
+                
 
                 $("#resposta").html(retorno).fadeIn(2000);
                 if (retorno == "Logado com Sucesso") {
-                    setTimeout("document.location = 'livro.php'", 500);
+                   setTimeout("document.location = 'escrever.php'", 500);
                 }
                 $("#resposta").fadeOut(200);
 

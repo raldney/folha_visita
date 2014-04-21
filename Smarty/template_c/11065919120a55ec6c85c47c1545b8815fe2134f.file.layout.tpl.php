@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-04-19 22:33:36
+<?php /* Smarty version Smarty-3.1.11, created on 2014-04-20 20:50:46
          compiled from "Smarty\template\layout.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:30037534c692999fb11-95332254%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '11065919120a55ec6c85c47c1545b8815fe2134f' => 
     array (
       0 => 'Smarty\\template\\layout.tpl',
-      1 => 1397939614,
+      1 => 1398019844,
       2 => 'file',
     ),
   ),
@@ -29,6 +29,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="Smarty/template/estilo/estilo.css" />
+
+        <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+        <script type="text/javascript" src="js/postaLivro.js"></script>
+        <script type="text/javascript" src="js/escreveLivro.js"></script>
+        <script type="text/javascript" src="js/loginUsuario.js"></script>
+        
+        <script type="text/javascript" src="js/cadastrarUsuario.js"></script>
+
+
+
+
+
         <title><?php echo $_smarty_tpl->tpl_vars['titulo']->value;?>
 </title>
     </head>

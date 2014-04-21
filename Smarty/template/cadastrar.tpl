@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="Smarty/template/estilo/estilo.css" />
         <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
-        <script type="text/javascript" src="js/cadastrarUsuario.js"></script>
+        
         <title>{$titulo}</title>
     </head>
     <body>
