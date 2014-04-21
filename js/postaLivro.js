@@ -1,14 +1,17 @@
 
 $(document).ready(function() {
 
-   
+
+    $('html').keyup(function(e) {
+        var max = parseInt($("#max").html());
+        if (e.keyCode == 8 && max < 140)
+            $("#max").html(max + 1);
+    });
     $("#mensagem").keypress(function() {
+       
         limita('mensagem');
     });
-
     $("#escrever").click(function() {
-
-
         if ($("#mensagem").val() == "") {
             alert("Digite uma mensagem!");
             mensagem.focus();
@@ -16,13 +19,9 @@ $(document).ready(function() {
         } else {
             postar($("#mensagem"));
         }
-
-
     });
-
 });
 function postar(msg) {
-    var div = $("#postagens").html();
     $(".loading").show();
     $(".loadingBar").show();
     $.ajax({
@@ -33,7 +32,7 @@ function postar(msg) {
         success: function(retorno) {
             $(".loading").hide();
             $(".loadingBar").fadeOut(200);
-            $("#postagens").html(retorno + div).slow(3000);
+            $("#postagens").html(retorno).fadeIn(3000);
         }
     });
 }
@@ -43,7 +42,6 @@ function limita(textarea) {
     $("#max").html(140 - tamanho);
     var texto = document.form_postar[textarea].value;
     var linha = tamanho / 42 + 1;
-
     if (tamanho <= 139) {
         if (tamanho == 41 * parseInt(linha)) {
             document.form_postar[textarea].value = texto.substring(0, (41 * parseInt(linha))) + "\n";
@@ -55,7 +53,6 @@ function limita(textarea) {
     }
 
     return true;
-
 }
 
 

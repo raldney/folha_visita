@@ -16,6 +16,6 @@ $posts = array_map("strip_tags", $postsArray);
 $user = new Usuario($posts['nome'], $posts['senha'], $posts['email'], $posts['website']);
 if ($cadastro->cadastrarUsuario($user)) {
     echo 'Cadastrado com Sucesso';
-    } else {
+} else {
     echo 'Não foi possivel cadastrar Usuario!';
 }

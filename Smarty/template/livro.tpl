@@ -10,6 +10,6 @@
         </div>
         <div id="postagens" style="color:#fff;font-size: 50px;">
         </div>
-        <p><a href="#" name="anterior" class="anterior" value="5"id="{$anterior}">Anterior</a>|<a name="{$proximo}">Proximo</a></p>
+        
     </body>
 </html>

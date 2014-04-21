@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="Smarty/template/estilo/estilo.css" />
 
         <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+         <script type="text/javascript" src="js/ajax.js"></script>
         <script type="text/javascript" src="js/postaLivro.js"></script>
         <script type="text/javascript" src="js/escreveLivro.js"></script>
         <script type="text/javascript" src="js/loginUsuario.js"></script>

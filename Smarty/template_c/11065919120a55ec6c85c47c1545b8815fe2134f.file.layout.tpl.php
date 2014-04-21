@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-04-20 20:50:46
+<?php /* Smarty version Smarty-3.1.11, created on 2014-04-21 18:11:49
          compiled from "Smarty\template\layout.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:30037534c692999fb11-95332254%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '11065919120a55ec6c85c47c1545b8815fe2134f' => 
     array (
       0 => 'Smarty\\template\\layout.tpl',
-      1 => 1398019844,
+      1 => 1398096632,
       2 => 'file',
     ),
   ),
@@ -31,6 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <link rel="stylesheet" type="text/css" href="Smarty/template/estilo/estilo.css" />
 
         <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+         <script type="text/javascript" src="js/ajax.js"></script>
         <script type="text/javascript" src="js/postaLivro.js"></script>
         <script type="text/javascript" src="js/escreveLivro.js"></script>
         <script type="text/javascript" src="js/loginUsuario.js"></script>

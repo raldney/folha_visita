@@ -7,7 +7,7 @@ body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
 li, dl, dt, dd, form,  fieldset, input, th, td
 {margin: 0; padding: 0; outline: none;}
 
-body{margin:0 auto; line-height:1; font-size:62.5%; background:#000; font-family:Arial, Helvetica, sans-serif;} /*---- 1.0 em = 10px---*/
+body{margin:0 auto; line-height:1; font-size:65%; background:#000; font-family:Arial, Helvetica, sans-serif;} /*---- 1.0 em = 10px---*/
 input, textarea{padding:3px; margin-bottom:5px; border:1px solid #c0c0c0; -moz-border-radius:3px; -webkit-border-radius:3px;}
 input:focus, textarea:focus{border-color:#999;}
 label{display:block; font-size:2em; margin-top:5px;}
@@ -35,7 +35,7 @@ text-decoration: none;
 -webkit-border-radius:5px 5px 0px 0px;
 padding-top: 200px}
 #mensagens{ background-color: #0a568f;width: 800px; margin:0 auto; -moz-border-radius:0px 0px 5px 5px;
--webkit-border-radius:0px 0px 5px 5px; padding-top: 10px;}
+-webkit-border-radius:0px 0px 5px 5px; padding-top: 10px;padding-bottom: 20px;}
 #form-login{margin: 0 auto; }
     .loading,#resposta{color: white;width:230px;  border:1px solid #ccc; padding:3px; text-align:center; margin:0 auto; display:none}
     .loading img{vertical-align:middle;}
@@ -46,6 +46,7 @@ padding-top: 200px}
 .email{font-family:Verdana, Geneva, sans-serif;font-size:14px; font-style:italic;}
 .site{font-family:Verdana, Geneva, sans-serif;font-size:12px;font-style:italic;}
 .mensagem{font-family:Verdana, Geneva, sans-serif;font-size:16px;}
+.antprox{margin-left: 300px;font-size: 60%;}
 
 
 

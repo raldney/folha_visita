@@ -1,7 +1,27 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+   $(document).ready(function() {
+       ajaxFunction();
+   });
+   
+   function ajaxFunction() {
+        var xmlHttp;
+        try{
+        // Firefox, Opera 8.0+, Safari
+        xmlHttp = new XMLHttpRequest();
+        }
+        catch (e){
+            try{
+            // Internet Explorer
+            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e){
+                try{
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                catch (e){
+                alert("Seu navegador não suporta AJAX!");
+                return false;
+                }
+            }
+        }
+    }
 

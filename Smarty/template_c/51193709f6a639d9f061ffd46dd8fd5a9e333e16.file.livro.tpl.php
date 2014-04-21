@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-04-21 03:40:11
+<?php /* Smarty version Smarty-3.1.11, created on 2014-04-21 17:45:02
          compiled from "Smarty\template\livro.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:311275352b93d7bf9f1-41935233%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '51193709f6a639d9f061ffd46dd8fd5a9e333e16' => 
     array (
       0 => 'Smarty\\template\\livro.tpl',
-      1 => 1398044409,
+      1 => 1398095049,
       2 => 'file',
     ),
   ),
@@ -17,11 +17,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.11',
   'unifunc' => 'content_5352b93d7cf3c1_32565237',
-  'variables' => 
-  array (
-    'anterior' => 0,
-    'proximo' => 0,
-  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5352b93d7cf3c1_32565237')) {function content_5352b93d7cf3c1_32565237($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_image')) include 'C:\\xampp\\htdocs\\livro_visita\\Smarty\\libs\\plugins\\function.html_image.php';
@@ -38,8 +33,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
         <div id="postagens" style="color:#fff;font-size: 50px;">
         </div>
-        <p><a href="#" name="anterior" class="anterior" value="5"id="<?php echo $_smarty_tpl->tpl_vars['anterior']->value;?>
-">Anterior</a>|<a name="<?php echo $_smarty_tpl->tpl_vars['proximo']->value;?>
-">Proximo</a></p>
+        
     </body>
 </html><?php }} ?>

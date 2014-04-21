@@ -21,20 +21,36 @@ class postarMensagem {
     }
 
     public function listarMensagem($pag) {
+
+        $lim = "10";
         $sql = sprintf("SELECT m.data_mensagem,u.site_usuario, u.nome_usuario, u.email_usuario, m.ctd_mensagem
                         FROM usuario u JOIN mensagem m
                         WHERE u.id_usuario = m.id_usuario
                         ORDER BY m.id_mensagem DESC ");
         $todos = $this->getAdapter()->executar($sql);
 
-        $lim = "10";
         $postInicial = $pag * $lim;
         $postFinal = $postInicial + $lim;
         $pagTotal = ($todos->rowCount()) / $lim;
+        if ($pag == 0) {
+            $anterior = "<a class='buttons' >";
+        } else {
+            $pagAnterior = $pag - 1;
+            if ($pagAnterior == 0) {
+                $anterior = "<a href='escrever.php' class='buttons' >";
+            } else {
+                $anterior = "<a href='?pag={$pagAnterior}' class='buttons' >";
+            }
+        }
+        if ($pag >= $pagTotal - 1) {
+            $proximo = "<a class='buttons' >";
+        } else {
+            $pagProximo = $pag + 1;
+            $proximo = "<a href='?pag={$pagProximo}' id='proximo' class='buttons' >";
+        }
 
-        $stmt = $this->getAdapter()->executar($sql . " limit 0 ," . $postFinal . "");
+        $stmt = $this->getAdapter()->executar($sql . " limit " . $postInicial . "," . $postFinal . "");
         while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            // aqui eu mostro os valores de minha consulta
             echo "<table class='postagem' >
                     <tr>
                         <td colspan='2' class='data' align='right;'>
@@ -61,6 +77,7 @@ class postarMensagem {
                     </tr>
                   </table>";
         }
+        echo "<p class='antprox'>{$anterior}<< Anterior</a>|{$proximo}Proximo >> </a></p>";
     }
 
 }
